@@ -1,0 +1,23 @@
+<%= semantic_form_for [:admin, @employee] do |f| %>
+	<%= f.inputs :name => "Employee" do %>
+		<%= f.input :first_name %>
+		<%= f.input :last_name %>
+		<%= f.input :dept, :label => "Department" %>
+		<%= f.input :startDate, :label => "Team member since" %>
+		<%= f.input :originLocation, :label => "Born in (Location)" %>
+		<%= f.input :birthday %>
+		<%= f.input :family %>
+		<%= f.input :fact1, :label => "Fact 1" %>
+		<%= f.input :fact2, :label => "Fact 2" %>
+		<%= f.input :fact3, :label => "Fact 3" %>
+		<%= f.input :photo, :as => :file %>
+	<% end %>
+
+
+
+
+	<%= f.buttons do %>
+		<%= f.commit_button %>
+  <% end %>
+
+<% end %>

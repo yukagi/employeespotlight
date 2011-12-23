@@ -1,0 +1,20 @@
+<div id="employee">
+	<div id="right-column">
+		<%= image_tag(@employee.photo.url(:medium), :id => "employee-image") %>
+	</div>
+	<div id="left-column">
+		<h1 id="name-header"><%= @employee.first_name %> <%= @employee.last_name %></h1>
+		<ul>
+			<li><p><span class="shadow-span">Department:</span> <%= @employee.dept %></p></li>
+			<li><p><span class="shadow-span">Team Member Since:</span> <%= @employee.startDate %></p></li>
+			<li><p><span class="shadow-span">Born in:</span> <%= @employee.originLocation %></p></li>
+			<li><p><span class="shadow-span">Birthday:</span> <%= @employee.birthday %></p></li>
+			<li><p><span class="shadow-span">Family:</span> <%= @employee.family %></p></li>
+			<ul>Facts about <%= @employee.first_name %>
+				<li><p><%= @employee.fact1 %></p></li>
+				<li><p><%= @employee.fact2 %></p></li>
+				<li><p><%= @employee.fact3 %></p></li>
+			</ul>
+		</ul>
+	</div>
+</div>

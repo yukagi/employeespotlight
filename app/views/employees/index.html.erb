@@ -1,0 +1,10 @@
+<div id="employee-list">
+<% @employees.each do |employee| %>
+	<div class="badge shadow" onClick="document.location='<%= employee_path(employee) %>'" >
+	<!-- Working on how to make a div containing the picture, name and department be the link -->
+		<%= image_tag(employee.photo.url(:thumb), :class => "badge-image") %>
+		<p><%= "#{employee.first_name} #{employee.last_name}" %></p> 
+		<p><%= "#{employee.dept}" %></p>
+	</div>
+<% end %>
+</div>
