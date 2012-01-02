@@ -3,4 +3,6 @@ db/*.sqlite3
 log/*.log
 tmp/
 .sass-cache/
-
+config/s3.yml
+*.swp
+*.DS_Store
